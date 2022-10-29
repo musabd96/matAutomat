@@ -59,12 +59,7 @@ namespace butik
 
                     //Produkt display
 
-                    string[] godisName = { "Kex",
-                                           "Snickers",
-                                           "Twix",
-                                           "Polly",
-                                           "Haribo Nappar",
-                                           "Marabou" };
+                    string[] godisName = { "Kex", "Snickers", "Twix", "Polly", "Haribo Nappar", "Marabou" };
                     int[] godisCost = { 9, 9, 10, 25, 15, 24 };
 
                     Console.WriteLine("\nProdukter              kostnad");
