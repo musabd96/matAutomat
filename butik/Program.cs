@@ -153,10 +153,11 @@ namespace butik
                         Purchase.Cost();
 
                     }
-                    //Avsluta programmet
+                    //Anropa Main progrom klass
                     else if (Choice == 6)
                     {
                         Console.Clear();
+                        Main(args);
                         break;
 
                     }

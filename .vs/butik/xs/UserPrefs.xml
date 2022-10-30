@@ -1,5 +1,8 @@
-﻿<Properties StartupConfiguration="{EC87E753-6C2F-4293-815F-96F2C30F9ED6}|Default">
-  <MonoDevelop.Ide.ItemProperties.butik PreferredExecutionTarget="MonoDevelop.Default" />
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{EC87E753-6C2F-4293-815F-96F2C30F9ED6}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.Workbench ActiveDocument="butik/Wallet.cs">
     <Files>
       <File FileName="butik/Program.cs" Line="13" Column="9" />
@@ -21,10 +24,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.butik PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

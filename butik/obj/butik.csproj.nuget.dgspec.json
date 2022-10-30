@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\YH\\repos\\matAutomat\\butik\\butik.csproj": {}
+    "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj": {}
   },
   "projects": {
-    "E:\\YH\\repos\\matAutomat\\butik\\butik.csproj": {
+    "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\YH\\repos\\matAutomat\\butik\\butik.csproj",
+        "projectUniqueName": "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj",
         "projectName": "butik",
-        "projectPath": "E:\\YH\\repos\\matAutomat\\butik\\butik.csproj",
-        "packagesPath": "C:\\Users\\nagee\\.nuget\\packages\\",
-        "outputPath": "E:\\YH\\repos\\matAutomat\\butik\\obj\\",
+        "projectPath": "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj",
+        "packagesPath": "/Users/mustafaabdulle/.nuget/packages/",
+        "outputPath": "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nagee\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/mustafaabdulle/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }
