@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace butik
 {
-    internal class Godis
+    internal class Candy : IProduct
     {
-        public string godisName { get; set; }
+        public string Name { get; set; }
 
-        public int godisPrice { get; set; }
+        public int Price { get; set; }
 
-        public int godisQuantity { get; set; }
+        public int Quantity { get; set; }
 
-        public int godisTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
 
-        public Godis(string name, int price)
+        public Candy(string name, int price)
         {
-            godisName = name;
-            godisPrice = price;
-            godisTotalPrice = price;
+            Name = name;
+            Price = price;
+            TotalPrice = price;
 
 
         }
 
         public override string ToString()
         {
-            return godisName + " " + godisPrice + " " + godisQuantity + " " + godisTotalPrice;
+            return Name + " " + Price + " " + Quantity + " " + TotalPrice;
         }
 
 
@@ -38,7 +38,7 @@ namespace butik
             while (true)
             {
 
-                int OrderGodis;
+                int OrderCandy;
                 int OrderQuantity;
 
                 //beställningar 
@@ -58,66 +58,66 @@ namespace butik
 
                     //Produkt display
 
-                    string[] godisName = { "Kex",
+                    string[] candyName = { "Kex",
                                            "Snickers", 
                                            "Twix", 
                                            "Polly", 
                                            "Haribo Nappar", 
                                            "Marabou" };
-                    int[] godisCost = { 9, 9, 10, 25, 15, 24 };
+                    int[] candyCost = { 9, 9, 10, 25, 15, 24 };
 
                     Console.WriteLine("\nProdukter              kostnad");
                     Console.WriteLine("--------------------------------\n");
 
-                    for (int i = 0; i < godisName.Length; i++)
+                    for (int i = 0; i < candyName.Length; i++)
                     {
                         Console.WriteLine(
                             "{0}. {1,-20} {2}kr/st\n", 
-                            i + 1, godisName[i], godisCost[i]);
+                            i + 1, candyName[i], candyCost[i]);
                     }
 
 
 
                     //Produkter och kostnad
 
-                    Godis godis1 = new Godis("Kex", 9);
-                    Godis godis2 = new Godis("Snickers", 9);
-                    Godis godis3 = new Godis("Twix", 10);
-                    Godis godis4 = new Godis("Polly", 25);
-                    Godis godis5 = new Godis("Haribo Nappar", 15);
-                    Godis godis6 = new Godis("Marabou", 24);
+                    Candy candy1 = new Candy("Kex", 9);
+                    Candy candy2 = new Candy("Snickers", 9);
+                    Candy candy3 = new Candy("Twix", 10);
+                    Candy candy4 = new Candy("Polly", 25);
+                    Candy candy5 = new Candy("Haribo Nappar", 15);
+                    Candy godis6 = new Candy("Marabou", 24);
 
 
                     try
                     {
                         Console.WriteLine("Välj en produkt att lägga i varukorgen: ");
 
-                        OrderGodis = Convert.ToInt32(Console.ReadLine());
+                        OrderCandy = Convert.ToInt32(Console.ReadLine());
 
-                        if (OrderGodis == 1)
+                        if (OrderCandy == 1)
                         {
 
                             Console.Clear();
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + godis1.godisName +
-                                " " + godis1.godisPrice + "kr/st");
+                            Console.WriteLine("Du har valt " + "---------->" + candy1.Name +
+                                " " + candy1.Price + "kr/st");
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            godis1.godisTotalPrice = OrderQuantity * godis1.godisTotalPrice;
-                            godis1.godisQuantity = OrderQuantity;
+                            candy1.TotalPrice = OrderQuantity * candy1.TotalPrice;
+                            candy1.Quantity = OrderQuantity;
 
 
-                            order1 = godis1.godisName + "  " + godis1.godisPrice + "kr * " +
-                                godis1.godisQuantity + "st  " + godis1.godisTotalPrice + ";-";
+                            order1 = candy1.Name + "  " + candy1.Price + "kr * " +
+                                candy1.Quantity + "st  " + candy1.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
 
-                            Order.godislist.Add(godis1);
+                            Order.candylist.Add(candy1);
 
                             Console.Clear();
 
@@ -137,28 +137,28 @@ namespace butik
                             break;
 
                         }
-                        else if (OrderGodis == 2)
+                        else if (OrderCandy == 2)
                         {
                             Console.Clear();
 
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + godis2.godisName +
-                                " " + godis2.godisPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + candy2.Name +
+                                " " + candy2.Price + "kr");
 
                             Console.WriteLine("Hur Många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            godis2.godisTotalPrice = OrderQuantity * godis2.godisTotalPrice;
-                            godis2.godisQuantity = OrderQuantity;
+                            candy2.TotalPrice = OrderQuantity * candy2.TotalPrice;
+                            candy2.Quantity = OrderQuantity;
 
-                            order2 = godis2.godisName + "  " + godis2.godisPrice + "kr * " +
-                                godis2.godisQuantity + "st  " + godis2.godisTotalPrice + ";-";
+                            order2 = candy2.Name + "  " + candy2.Price + "kr * " +
+                                candy2.Quantity + "st  " + candy2.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
-                            Order.godislist.Add(godis2);
+                            Order.candylist.Add(candy2);
 
                             Console.Clear();
 
@@ -177,27 +177,27 @@ namespace butik
 
                         }
 
-                        else if (OrderGodis == 3)
+                        else if (OrderCandy == 3)
                         {
                             Console.Clear();
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + godis3.godisName +
-                                " " + godis3.godisPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + candy3.Name +
+                                " " + candy3.Price + "kr");
 
                             Console.WriteLine("Hur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            godis3.godisTotalPrice = OrderQuantity * godis3.godisTotalPrice;
-                            godis3.godisQuantity = OrderQuantity; ;
+                            candy3.TotalPrice = OrderQuantity * candy3.TotalPrice;
+                            candy3.Quantity = OrderQuantity; ;
 
-                            order3 = godis3.godisName + "  " + godis3.godisPrice + "kr * " +
-                                godis3.godisQuantity + "st  " + godis3.godisTotalPrice + ";-";
+                            order3 = candy3.Name + "  " + candy3.Price + "kr * " +
+                                candy3.Quantity + "st  " + candy3.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
-                            Order.godislist.Add(godis3);
+                            Order.candylist.Add(candy3);
 
                             Console.Clear();
 
@@ -216,29 +216,29 @@ namespace butik
                             break;
 
                         }
-                        else if (OrderGodis == 4)
+                        else if (OrderCandy == 4)
                         {
                             Console.Clear();
 
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + godis4.godisName +
-                                " " + godis4.godisPrice + "kr/st");
+                            Console.WriteLine("Du har valt " + "---------->" + candy4.Name +
+                                " " + candy4.Price + "kr/st");
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
-                            godis4.godisTotalPrice = OrderQuantity * godis4.godisTotalPrice;
-                            godis4.godisQuantity = OrderQuantity; ;
+                            candy4.TotalPrice = OrderQuantity * candy4.TotalPrice;
+                            candy4.Quantity = OrderQuantity; ;
 
-                            order4 = godis4.godisName + "  " + godis4.godisPrice + "kr * " +
-                                godis4.godisQuantity + "st  " + godis4.godisTotalPrice + ";-";
+                            order4 = candy4.Name + "  " + candy4.Price + "kr * " +
+                                candy4.Quantity + "st  " + candy4.TotalPrice + ";-";
 
 
 
                             //Lägg till orderlist i Order Klass
-                            Order.godislist.Add(godis4);
+                            Order.candylist.Add(candy4);
 
                             Console.Clear();
 
@@ -257,29 +257,29 @@ namespace butik
                             break;
 
                         }
-                        else if (OrderGodis == 5)
+                        else if (OrderCandy == 5)
                         {
                             Console.Clear();
 
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + godis5.godisName +
-                                " " + godis5.godisPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + candy5.Name +
+                                " " + candy5.Price + "kr");
 
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            godis5.godisTotalPrice = OrderQuantity * godis5.godisTotalPrice;
-                            godis5.godisQuantity = OrderQuantity; ;
+                            candy5.TotalPrice = OrderQuantity * candy5.TotalPrice;
+                            candy5.Quantity = OrderQuantity; ;
 
-                            order5 = godis5.godisName + "  " + godis1.godisPrice + "kr * " +
-                                godis5.godisQuantity + "st  " + godis5.godisTotalPrice + ";-";
+                            order5 = candy5.Name + "  " + candy1.Price + "kr * " +
+                                candy5.Quantity + "st  " + candy5.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
-                            Order.godislist.Add(godis5);
+                            Order.candylist.Add(candy5);
 
                             Console.Clear();
 
@@ -298,7 +298,7 @@ namespace butik
                             break;
 
                         }
-                        else if (OrderGodis == 6)
+                        else if (OrderCandy == 6)
                         {
 
                             
@@ -306,8 +306,8 @@ namespace butik
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + godis6.godisName +
-                                " " + godis6.godisPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + godis6.Name +
+                                " " + godis6.Price + "kr");
 
                             
 
@@ -315,16 +315,16 @@ namespace butik
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            godis6.godisTotalPrice = OrderQuantity * godis6.godisTotalPrice;
-                            godis6.godisQuantity = OrderQuantity; ;
+                            godis6.TotalPrice = OrderQuantity * godis6.TotalPrice;
+                            godis6.Quantity = OrderQuantity; ;
 
-                            order6 = godis5.godisName + "  " + godis6.godisPrice + "kr * " +
-                                godis6.godisQuantity + "st  " + godis6.godisTotalPrice + ";-";
+                            order6 = candy5.Name + "  " + godis6.Price + "kr * " +
+                                godis6.Quantity + "st  " + godis6.TotalPrice + ";-";
 
 
 
                             //Lägg till orderlist i Order Klass
-                            Order.godislist.Add(godis6); ;
+                            Order.candylist.Add(godis6); ;
                             Console.Clear();
 
                             //Anroppa logo 

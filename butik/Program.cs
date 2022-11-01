@@ -136,7 +136,7 @@ namespace butik
                     else if (Choice == 2)
                     {
                         Console.Clear();
-                        Godis.Menu(args);
+                        Candy.Menu(args);
 
                     }
                     else if (Choice == 3)

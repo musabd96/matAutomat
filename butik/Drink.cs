@@ -8,28 +8,28 @@ using System.Xml.Linq;
 
 namespace butik
 {
-    internal class Drink
+    internal class Drink : IProduct
     {
-        public string drinkName { get; set; }
+        public string Name { get; set; }
 
-        public int drinkPrice { get; set; }
+        public int Price { get; set; }
 
-        public int drinkQuantity { get; set; }
+        public int Quantity { get; set; }
 
-        public int drinkTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
 
         public Drink(string name, int price)
         {
-            drinkName = name;
-            drinkPrice = price;
-            drinkTotalPrice = price;
+            Name = name;
+            Price = price;
+            TotalPrice = price;
 
 
         }
 
         public override string ToString()
         {
-            return drinkName + " " + drinkPrice + " " + drinkQuantity + " " + drinkTotalPrice;
+            return Name + " " + Price + " " + Quantity + " " + TotalPrice;
         }
 
 
@@ -40,7 +40,7 @@ namespace butik
             while (true)
             {
 
-                int DrinkFruit;
+                int orderDrink;
                 int OrderQuantity;
 
                 //beställningar 
@@ -93,26 +93,26 @@ namespace butik
                     {
                         Console.WriteLine("Välj en produkt att lägga i varukorgen: ");
 
-                        DrinkFruit = Convert.ToInt32(Console.ReadLine());
+                        orderDrink = Convert.ToInt32(Console.ReadLine());
 
 
-                        if (DrinkFruit == 1)
+                        if (orderDrink == 1)
                         {
 
                             Console.Clear();
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + drink1.drinkName +
-                                " " + drink1.drinkPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + drink1.Name +
+                                " " + drink1.Price + "kr");
 
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            drink1.drinkTotalPrice = OrderQuantity * drink1.drinkTotalPrice;
-                            drink1.drinkQuantity = OrderQuantity;
+                            drink1.TotalPrice = OrderQuantity * drink1.TotalPrice;
+                            drink1.Quantity = OrderQuantity;
 
 
 
@@ -121,8 +121,8 @@ namespace butik
 
 
 
-                            order1 = drink1.drinkName + "  " + drink1.drinkPrice + "kr * " +
-                                drink1.drinkQuantity + "st  " + drink1.drinkTotalPrice + ";-";
+                            order1 = drink1.Name + "  " + drink1.Price + "kr * " +
+                                drink1.Quantity + "st  " + drink1.TotalPrice + ";-";
 
                             Console.Clear();
 
@@ -144,25 +144,25 @@ namespace butik
                             break;
 
                         }
-                        else if (DrinkFruit == 2)
+                        else if (orderDrink == 2)
                         {
                             Console.Clear();
 
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + drink2.drinkName +
-                                " " + drink2.drinkPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + drink2.Name +
+                                " " + drink2.Price + "kr");
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            drink2.drinkTotalPrice = OrderQuantity * drink2.drinkTotalPrice;
-                            drink2.drinkQuantity = OrderQuantity; ;
+                            drink2.TotalPrice = OrderQuantity * drink2.TotalPrice;
+                            drink2.Quantity = OrderQuantity; ;
 
-                            order2 = drink2.drinkName + "  " + drink2.drinkPrice + "kr * " +
-                                drink2.drinkQuantity + "st  " + drink2.drinkTotalPrice + ";-";
+                            order2 = drink2.Name + "  " + drink2.Price + "kr * " +
+                                drink2.Quantity + "st  " + drink2.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink2);
@@ -184,24 +184,24 @@ namespace butik
 
                         }
 
-                        else if (DrinkFruit == 3)
+                        else if (orderDrink == 3)
                         {
                             Console.Clear();
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + drink3.drinkName +
-                                " " + drink3.drinkPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + drink3.Name +
+                                " " + drink3.Price + "kr");
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            drink3.drinkTotalPrice = OrderQuantity * drink3.drinkTotalPrice;
-                            drink3.drinkQuantity = OrderQuantity; ;
+                            drink3.TotalPrice = OrderQuantity * drink3.TotalPrice;
+                            drink3.Quantity = OrderQuantity; ;
 
-                            order3 = drink3.drinkName + "  " + drink3.drinkPrice + "kr * " +
-                                drink3.drinkQuantity + "st  " + drink3.drinkTotalPrice + ";-";
+                            order3 = drink3.Name + "  " + drink3.Price + "kr * " +
+                                drink3.Quantity + "st  " + drink3.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink3);
@@ -224,23 +224,23 @@ namespace butik
 
 
                         }
-                        else if (DrinkFruit == 4)
+                        else if (orderDrink == 4)
                         {
                             Console.Clear();
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + drink4.drinkName +
-                                " " + drink4.drinkPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + drink4.Name +
+                                " " + drink4.Price + "kr");
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
-                            drink4.drinkTotalPrice = OrderQuantity * drink4.drinkTotalPrice;
-                            drink4.drinkQuantity = OrderQuantity; ;
+                            drink4.TotalPrice = OrderQuantity * drink4.TotalPrice;
+                            drink4.Quantity = OrderQuantity; ;
 
-                            order4 = drink4.drinkName + "  " + drink4.drinkPrice + "kr * " +
-                                drink4.drinkQuantity + "st  " + drink4.drinkTotalPrice + ";-";
+                            order4 = drink4.Name + "  " + drink4.Price + "kr * " +
+                                drink4.Quantity + "st  " + drink4.TotalPrice + ";-";
 
 
 
@@ -263,23 +263,23 @@ namespace butik
                             break;
 
                         }
-                        else if (DrinkFruit == 5)
+                        else if (orderDrink == 5)
                         {
                             Console.Clear();
 
-                            Console.WriteLine("Du har valt " + "---------->" + drink5.drinkName +
-                                " " + drink5.drinkPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + drink5.Name +
+                                " " + drink5.Price + "kr");
 
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            drink5.drinkTotalPrice = OrderQuantity * drink5.drinkTotalPrice;
-                            drink5.drinkQuantity = OrderQuantity; ;
+                            drink5.TotalPrice = OrderQuantity * drink5.TotalPrice;
+                            drink5.Quantity = OrderQuantity; ;
 
-                            order5 = drink5.drinkName + "  " + drink1.drinkPrice + "kr * " +
-                                drink5.drinkQuantity + "st  " + drink5.drinkTotalPrice + ";-";
+                            order5 = drink5.Name + "  " + drink1.Price + "kr * " +
+                                drink5.Quantity + "st  " + drink5.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink5);
@@ -301,24 +301,24 @@ namespace butik
                             break;
 
                         }
-                        else if (DrinkFruit == 6)
+                        else if (orderDrink == 6)
                         {
                             Console.Clear();
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + drink6.drinkName +
-                                " " + drink6.drinkPrice + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + drink6.Name +
+                                " " + drink6.Price + "kr");
 
                             Console.WriteLine("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            drink6.drinkTotalPrice = OrderQuantity * drink6.drinkTotalPrice;
-                            drink6.drinkQuantity = OrderQuantity; ;
+                            drink6.TotalPrice = OrderQuantity * drink6.TotalPrice;
+                            drink6.Quantity = OrderQuantity; ;
 
-                            order6 = drink5.drinkName + "  " + drink6.drinkPrice + "kr * " +
-                                drink6.drinkQuantity + "st  " + drink6.drinkTotalPrice + ";-";
+                            order6 = drink5.Name + "  " + drink6.Price + "kr * " +
+                                drink6.Quantity + "st  " + drink6.TotalPrice + ";-";
 
 
 

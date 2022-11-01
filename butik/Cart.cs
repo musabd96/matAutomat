@@ -13,9 +13,9 @@ namespace butik
         public static void printCart(string[]? args)
         {
 
-            double totalFruit = Order.fruitlist.Sum(item => item.fruitTotalPrice);
-            double totalGodis = Order.godislist.Sum(item => item.godisTotalPrice);
-            double totalDrink = Order.drinklist.Sum(item => item.drinkTotalPrice);
+            double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
+            double totalGodis = Order.candylist.Sum(item => item.TotalPrice);
+            double totalDrink = Order.drinklist.Sum(item => item.TotalPrice);
 
 
             int total = (int)(totalFruit + totalGodis + totalDrink);
@@ -69,7 +69,7 @@ namespace butik
         public static void remove()
         {
             Order.fruitlist.Clear();
-            Order.godislist.Clear();
+            Order.candylist.Clear();
             Order.drinklist.Clear();
 
             Order.fruitList();

@@ -15,9 +15,9 @@ namespace butik
         {
             int cash;
             //List till alla produkter 
-            double totalFruit = Order.fruitlist.Sum(item => item.fruitTotalPrice);
-            double totalGodis = Order.godislist.Sum(item => item.godisTotalPrice);
-            double totalDrink = Order.drinklist.Sum(item => item.drinkTotalPrice);
+            double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
+            double totalGodis = Order.candylist.Sum(item => item.TotalPrice);
+            double totalDrink = Order.drinklist.Sum(item => item.TotalPrice);
 
             //totala priser till alla produkter i kundvagn
             decimal totalProductPrice = (int)(totalFruit + totalGodis + totalDrink);
@@ -63,6 +63,7 @@ namespace butik
 
                     //Kunden ska mata in sina sedlar här 
                     Console.Write("\nMata in sedlar här: ");
+
                     int customerMoney = Convert.ToInt32(Console.ReadLine());
 
                     Console.Write("Antal sedlar: ");
@@ -188,9 +189,9 @@ namespace butik
         {
 
 
-            double totalFruit = Order.fruitlist.Sum(item => item.fruitTotalPrice);
-            double totalGodis = Order.godislist.Sum(item => item.godisTotalPrice);
-            double totalDrink = Order.drinklist.Sum(item => item.drinkTotalPrice);
+            double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
+            double totalGodis = Order.candylist.Sum(item => item.TotalPrice);
+            double totalDrink = Order.drinklist.Sum(item => item.TotalPrice);
 
             decimal totalProductPrice = (int)(totalFruit + totalGodis + totalDrink);           
 
@@ -205,18 +206,18 @@ namespace butik
 
             //Kvitto
 
-            Console.WriteLine("                    KVITTO\n" +
-                "-----------------------------------------------------");
+            Console.WriteLine("                KVITTO\n" +
+                    "------------------------------------------------");
             Order.fruitList();
             Order.godisList();
 
-            Console.WriteLine("-----------------------------------------------------\n" +
-                              "\nTotalt SEK                                     " + 
-                              totalProductPrice  + ";-");
+            Console.WriteLine("------------------------------------------------\n" +
+                              "\nTotalt SEK                                " +
+                              totalProductPrice + ";-");
 
 
 
-            Console.WriteLine("Köp" +
+            Console.WriteLine("\n\n\nKöp" +
                               "SEK                      " + totalProductPrice + "\n" +
                               "GODKÄNT");
 
@@ -241,8 +242,30 @@ namespace butik
             }
             else if (output == 3)
             {
+
+                Console.Clear();
+
+
+                //Anroppa logo 
                 Program.logo();
-                Console.WriteLine("\nTack för att du har besökt oss :)\n\n\n");
+
+                //Kvitto
+
+                Console.WriteLine("                KVITTO\n" +
+                    "------------------------------------------------");
+                Order.fruitList();
+                Order.godisList();
+
+                Console.WriteLine("------------------------------------------------\n" +
+                                  "\nTotalt SEK                                " +
+                                  totalProductPrice + ";-");
+
+
+
+                Console.WriteLine("\n\n\nKöp" +
+                                  "SEK                      " + totalProductPrice + "\n" +
+                                  "GODKÄNT");
+                Console.WriteLine("\n\n\n\n\nTack för att du har besökt oss :)\n\n\n");
                 Environment.Exit(0);
 
             }

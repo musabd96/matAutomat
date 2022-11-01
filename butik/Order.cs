@@ -11,7 +11,7 @@ namespace butik
     internal class Order
     {
         public static List<Fruit> fruitlist = new List<Fruit>();
-        public static List<Godis> godislist = new List<Godis>();
+        public static List<Candy> candylist = new List<Candy>();
         public static List<Drink> drinklist = new List<Drink>();
 
         
@@ -24,8 +24,8 @@ namespace butik
             {
 
                 Console.WriteLine("{0}             {1}kr/kg * {2}st               {3};- ",
-                    fruit.fruitName, fruit.fruitPrice,
-                    fruit.fruitQuantity, fruit.fruitTotalPrice);
+                    fruit.Name, fruit.Price,
+                    fruit.Quantity, fruit.TotalPrice);
 
             }
 
@@ -33,12 +33,12 @@ namespace butik
       
         public static void godisList()
         {
-            foreach (Godis godis in Order.godislist)
+            foreach (Candy godis in Order.candylist)
             {
 
                 Console.WriteLine("{0}             {1}kr/kg * {2}st               {3};- ",
-                    godis.godisName, godis.godisPrice,
-                    godis.godisQuantity, godis.godisTotalPrice);
+                    godis.Name, godis.Price,
+                    godis.Quantity, godis.TotalPrice);
 
             }
         }
@@ -48,8 +48,8 @@ namespace butik
             {
 
                 Console.WriteLine("{0}             {1}kr/kg * {2}st               {3};- ",
-                    drink.drinkName, drink.drinkPrice,
-                    drink.drinkQuantity, drink.drinkTotalPrice);
+                    drink.Name, drink.Price,
+                    drink.Quantity, drink.TotalPrice);
 
             }
         }
@@ -58,7 +58,7 @@ namespace butik
 
         public static void total()
         {
-            double total = fruitlist.Sum(item => item.fruitTotalPrice);
+            double total = fruitlist.Sum(item => item.TotalPrice);
 
             Console.WriteLine(total);
         }

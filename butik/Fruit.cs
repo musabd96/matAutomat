@@ -8,28 +8,28 @@ using System.Xml.Linq;
 
 namespace butik
 {
-    internal class Fruit
+    internal class Fruit : IProduct
     {
-        public string fruitName { get; set; }
+        public string Name { get; set; }
 
-        public int fruitPrice { get; set; }
+        public int Price { get; set; }
 
-        public int fruitQuantity { get; set; }
+        public int Quantity { get; set; }
 
-        public int fruitTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
 
         public Fruit(string name, int price)
         {
-            fruitName = name;
-            fruitPrice = price;
-            fruitTotalPrice = price;
+            Name = name;
+            Price = price;
+            TotalPrice = price;
             
             
         }
 
         public override string ToString()
         {
-            return fruitName + " " + fruitPrice + " " + fruitQuantity+ " " + fruitTotalPrice;
+            return Name + " " + Price + " " + Quantity+ " " + TotalPrice;
         }
 
 
@@ -103,16 +103,16 @@ namespace butik
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + fruit1.fruitName +
-                                " " + fruit1.fruitPrice + "kr/kg");
+                            Console.WriteLine("Du har valt " + "---------->" + fruit1.Name +
+                                " " + fruit1.Price + "kr/kg");
 
 
                             Console.WriteLine("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            fruit1.fruitTotalPrice = OrderQuantity * fruit1.fruitTotalPrice;
-                            fruit1.fruitQuantity = OrderQuantity;
+                            fruit1.TotalPrice = OrderQuantity * fruit1.TotalPrice;
+                            fruit1.Quantity = OrderQuantity;
 
 
 
@@ -121,8 +121,8 @@ namespace butik
 
 
 
-                            order1 = fruit1.fruitName + "  " + fruit1.fruitPrice + "kg/kr * " +
-                                fruit1.fruitQuantity + "kg  " + fruit1.fruitTotalPrice + ";-";
+                            order1 = fruit1.Name + "  " + fruit1.Price + "kg/kr * " +
+                                fruit1.Quantity + "kg  " + fruit1.TotalPrice + ";-";
 
                             Console.Clear();
 
@@ -151,18 +151,18 @@ namespace butik
                             //Anroppa logo 
                             Program.logo();
 
-                            Console.WriteLine("Du har valt " + "---------->" + fruit2.fruitName +
-                                " " + fruit2.fruitPrice + "kr/kg");
+                            Console.WriteLine("Du har valt " + "---------->" + fruit2.Name +
+                                " " + fruit2.Price + "kr/kg");
 
                             Console.WriteLine("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            fruit2.fruitTotalPrice = OrderQuantity * fruit2.fruitTotalPrice;
-                            fruit2.fruitQuantity = OrderQuantity; ;
+                            fruit2.TotalPrice = OrderQuantity * fruit2.TotalPrice;
+                            fruit2.Quantity = OrderQuantity; ;
 
-                            order2 = fruit2.fruitName + "  " + fruit2.fruitPrice + "kg/kr * " +
-                                fruit2.fruitQuantity + "kg  " + fruit2.fruitTotalPrice + ";-";
+                            order2 = fruit2.Name + "  " + fruit2.Price + "kg/kr * " +
+                                fruit2.Quantity + "kg  " + fruit2.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit2);
@@ -190,18 +190,18 @@ namespace butik
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + fruit3.fruitName +
-                                " " + fruit3.fruitPrice + "kr/kg");
+                            Console.WriteLine("Du har valt " + "---------->" + fruit3.Name +
+                                " " + fruit3.Price + "kr/kg");
 
                             Console.WriteLine("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            fruit3.fruitTotalPrice = OrderQuantity * fruit3.fruitTotalPrice;
-                            fruit3.fruitQuantity = OrderQuantity; ;
+                            fruit3.TotalPrice = OrderQuantity * fruit3.TotalPrice;
+                            fruit3.Quantity = OrderQuantity; ;
 
-                            order3 = fruit3.fruitName + "  " + fruit3.fruitPrice + "kg/kr * " +
-                                fruit3.fruitQuantity + "kg  " + fruit3.fruitTotalPrice + ";-";
+                            order3 = fruit3.Name + "  " + fruit3.Price + "kg/kr * " +
+                                fruit3.Quantity + "kg  " + fruit3.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit3);
@@ -230,17 +230,17 @@ namespace butik
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + fruit4.fruitName +
-                                " " + fruit4.fruitPrice + "kr/kg");
+                            Console.WriteLine("Du har valt " + "---------->" + fruit4.Name +
+                                " " + fruit4.Price + "kr/kg");
 
                             Console.WriteLine("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
-                            fruit4.fruitTotalPrice = OrderQuantity * fruit4.fruitTotalPrice;
-                            fruit4.fruitQuantity = OrderQuantity; ;
+                            fruit4.TotalPrice = OrderQuantity * fruit4.TotalPrice;
+                            fruit4.Quantity = OrderQuantity; ;
 
-                            order4 = fruit4.fruitName + "  " + fruit4.fruitPrice + "kg/kr * " +
-                                fruit4.fruitQuantity + "kg  " + fruit4.fruitTotalPrice + ";-";
+                            order4 = fruit4.Name + "  " + fruit4.Price + "kg/kr * " +
+                                fruit4.Quantity + "kg  " + fruit4.TotalPrice + ";-";
 
 
 
@@ -267,19 +267,19 @@ namespace butik
                         {
                             Console.Clear();
 
-                            Console.WriteLine("Du har valt " + "---------->" + fruit5.fruitName +
-                                " " + fruit5.fruitPrice + "kr/kg");
+                            Console.WriteLine("Du har valt " + "---------->" + fruit5.Name +
+                                " " + fruit5.Price + "kr/kg");
 
 
                             Console.WriteLine("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            fruit5.fruitTotalPrice = OrderQuantity * fruit5.fruitTotalPrice;
-                            fruit5.fruitQuantity = OrderQuantity; ;
+                            fruit5.TotalPrice = OrderQuantity * fruit5.TotalPrice;
+                            fruit5.Quantity = OrderQuantity; ;
 
-                            order5 = fruit5.fruitName + "  " + fruit5.fruitPrice + "kg/kr * " +
-                                fruit5.fruitQuantity + "kg  " + fruit5.fruitTotalPrice + ";-";
+                            order5 = fruit5.Name + "  " + fruit5.Price + "kg/kr * " +
+                                fruit5.Quantity + "kg  " + fruit5.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit5);
@@ -307,18 +307,18 @@ namespace butik
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + fruit6.fruitName +
-                                " " + fruit6.fruitPrice + "kr/kg");
+                            Console.WriteLine("Du har valt " + "---------->" + fruit6.Name +
+                                " " + fruit6.Price + "kr/kg");
 
                             Console.WriteLine("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            fruit6.fruitTotalPrice = OrderQuantity * fruit6.fruitTotalPrice;
-                            fruit6.fruitQuantity = OrderQuantity; ;
+                            fruit6.TotalPrice = OrderQuantity * fruit6.TotalPrice;
+                            fruit6.Quantity = OrderQuantity; ;
 
-                            order6 = fruit5.fruitName + "  " + fruit6.fruitPrice + "kg/kr * " +
-                                fruit6.fruitQuantity + "kg  " + fruit6.fruitTotalPrice + ";-";
+                            order6 = fruit5.Name + "  " + fruit6.Price + "kg/kr * " +
+                                fruit6.Quantity + "kg  " + fruit6.TotalPrice + ";-";
 
 
 

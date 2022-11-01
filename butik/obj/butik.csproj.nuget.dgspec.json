@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj": {}
+    "C:\\Users\\nagee\\source\\repos\\matAutomat\\butik\\butik.csproj": {}
   },
   "projects": {
-    "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj": {
+    "C:\\Users\\nagee\\source\\repos\\matAutomat\\butik\\butik.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj",
+        "projectUniqueName": "C:\\Users\\nagee\\source\\repos\\matAutomat\\butik\\butik.csproj",
         "projectName": "butik",
-        "projectPath": "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/butik.csproj",
-        "packagesPath": "/Users/mustafaabdulle/.nuget/packages/",
-        "outputPath": "/Users/mustafaabdulle/Desktop/matAutomat/matAutomat/butik/obj/",
+        "projectPath": "C:\\Users\\nagee\\source\\repos\\matAutomat\\butik\\butik.csproj",
+        "packagesPath": "C:\\Users\\nagee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nagee\\source\\repos\\matAutomat\\butik\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mustafaabdulle/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\nagee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
