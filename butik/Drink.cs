@@ -107,7 +107,7 @@ namespace butik
                                 " " + drink1.Price + "kr");
 
 
-                            Console.WriteLine("\nHur många ska du ha:");
+                            Console.Write("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
@@ -154,7 +154,7 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + drink2.Name +
                                 " " + drink2.Price + "kr");
 
-                            Console.WriteLine("\nHur många ska du ha:");
+                            Console.Write("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
@@ -175,7 +175,7 @@ namespace butik
                             Console.WriteLine("Tack för att du handlat oss! " +
                                 "\nProdukten har lagt till i kundvagnen\n" + "\n" + order2);
 
-                            Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                            Console.Write("\nTryck på valfri tangent för att fortsätta...");
 
                             Console.ReadKey();
                             Console.Clear();
@@ -233,7 +233,7 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + drink4.Name +
                                 " " + drink4.Price + "kr");
 
-                            Console.WriteLine("\nHur många ska du ha:");
+                            Console.Write("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
                             drink4.TotalPrice = OrderQuantity * drink4.TotalPrice;
@@ -271,7 +271,7 @@ namespace butik
                                 " " + drink5.Price + "kr");
 
 
-                            Console.WriteLine("\nHur många ska du ha:");
+                            Console.Write("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
@@ -310,7 +310,7 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + drink6.Name +
                                 " " + drink6.Price + "kr");
 
-                            Console.WriteLine("\nHur många ska du ha:");
+                            Console.Write("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 

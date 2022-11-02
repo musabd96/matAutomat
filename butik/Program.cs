@@ -127,7 +127,7 @@ namespace butik
                         Console.Clear();
 
                         Fruit.Menu(args);
-
+                        
                         
 
                     }
@@ -196,6 +196,8 @@ namespace butik
                 "\n|              MUAB Supermarket                |\n" +
                 "------------------------------------------------\n");
         }
+
+        
 
 
     }

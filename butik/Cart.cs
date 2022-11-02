@@ -24,9 +24,9 @@ namespace butik
             //Anroppa logo 
             Program.logo();
             Console.WriteLine("                    VARUKORGEN\n" +
-                "-------------------------------------------------------" +
-                "\nProduker              koster * Antal            Totalkosnad" + 
-                "\n-----------------------------------------------------");
+                              "-------------------------------------------------------" +
+                              "\nProduker        koster * Antal            Totalkosnad" + 
+                              "\n-----------------------------------------------------");
             Order.fruitList();
             Order.godisList();
             Order.drinkList();

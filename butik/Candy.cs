@@ -104,7 +104,7 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + candy1.Name +
                                 " " + candy1.Price + "kr/st");
 
-                            Console.WriteLine("\nHur många ska du ha:");
+                            Console.Write("\nHur många ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
@@ -112,7 +112,7 @@ namespace butik
                             candy1.Quantity = OrderQuantity;
 
 
-                            order1 = candy1.Name + "  " + candy1.Price + "kr * " +
+                            order1 = candy1.Name + "  " + candy1.Price + "kr/st * " +
                                 candy1.Quantity + "st  " + candy1.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
@@ -154,7 +154,7 @@ namespace butik
                             candy2.TotalPrice = OrderQuantity * candy2.TotalPrice;
                             candy2.Quantity = OrderQuantity;
 
-                            order2 = candy2.Name + "  " + candy2.Price + "kr * " +
+                            order2 = candy2.Name + "  " + candy2.Price + "kr/st * " +
                                 candy2.Quantity + "st  " + candy2.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
@@ -193,7 +193,7 @@ namespace butik
                             candy3.TotalPrice = OrderQuantity * candy3.TotalPrice;
                             candy3.Quantity = OrderQuantity; ;
 
-                            order3 = candy3.Name + "  " + candy3.Price + "kr * " +
+                            order3 = candy3.Name + "  " + candy3.Price + "kr/st * " +
                                 candy3.Quantity + "st  " + candy3.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
@@ -232,7 +232,7 @@ namespace butik
                             candy4.TotalPrice = OrderQuantity * candy4.TotalPrice;
                             candy4.Quantity = OrderQuantity; ;
 
-                            order4 = candy4.Name + "  " + candy4.Price + "kr * " +
+                            order4 = candy4.Name + "  " + candy4.Price + "kr/st * " +
                                 candy4.Quantity + "st  " + candy4.TotalPrice + ";-";
 
 
@@ -275,7 +275,7 @@ namespace butik
                             candy5.TotalPrice = OrderQuantity * candy5.TotalPrice;
                             candy5.Quantity = OrderQuantity; ;
 
-                            order5 = candy5.Name + "  " + candy1.Price + "kr * " +
+                            order5 = candy5.Name + "  " + candy1.Price + "kr/st * " +
                                 candy5.Quantity + "st  " + candy5.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
@@ -318,7 +318,7 @@ namespace butik
                             godis6.TotalPrice = OrderQuantity * godis6.TotalPrice;
                             godis6.Quantity = OrderQuantity; ;
 
-                            order6 = candy5.Name + "  " + godis6.Price + "kr * " +
+                            order6 = candy5.Name + "  " + godis6.Price + "kr/st * " +
                                 godis6.Quantity + "st  " + godis6.TotalPrice + ";-";
 
 

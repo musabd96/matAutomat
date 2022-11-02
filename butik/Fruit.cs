@@ -107,7 +107,7 @@ namespace butik
                                 " " + fruit1.Price + "kr/kg");
 
 
-                            Console.WriteLine("\nHur mycket KG ska du ha:");
+                            Console.Write("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
@@ -121,7 +121,7 @@ namespace butik
 
 
 
-                            order1 = fruit1.Name + "  " + fruit1.Price + "kg/kr * " +
+                            order1 = fruit1.Name + "  " + fruit1.Price + "kr/kg * " +
                                 fruit1.Quantity + "kg  " + fruit1.TotalPrice + ";-";
 
                             Console.Clear();
@@ -154,14 +154,14 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + fruit2.Name +
                                 " " + fruit2.Price + "kr/kg");
 
-                            Console.WriteLine("\nHur mycket KG ska du ha:");
+                            Console.Write("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
                             fruit2.TotalPrice = OrderQuantity * fruit2.TotalPrice;
                             fruit2.Quantity = OrderQuantity; ;
 
-                            order2 = fruit2.Name + "  " + fruit2.Price + "kg/kr * " +
+                            order2 = fruit2.Name + "  " + fruit2.Price + "kr/kg * " +
                                 fruit2.Quantity + "kg  " + fruit2.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
@@ -193,14 +193,14 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + fruit3.Name +
                                 " " + fruit3.Price + "kr/kg");
 
-                            Console.WriteLine("\nHur mycket KG ska du ha:");
+                            Console.Write("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
                             fruit3.TotalPrice = OrderQuantity * fruit3.TotalPrice;
                             fruit3.Quantity = OrderQuantity; ;
 
-                            order3 = fruit3.Name + "  " + fruit3.Price + "kg/kr * " +
+                            order3 = fruit3.Name + "  " + fruit3.Price + "kr/kg * " +
                                 fruit3.Quantity + "kg  " + fruit3.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
@@ -233,13 +233,13 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + fruit4.Name +
                                 " " + fruit4.Price + "kr/kg");
 
-                            Console.WriteLine("\nHur mycket KG ska du ha:");
+                            Console.Write("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
                             fruit4.TotalPrice = OrderQuantity * fruit4.TotalPrice;
                             fruit4.Quantity = OrderQuantity; ;
 
-                            order4 = fruit4.Name + "  " + fruit4.Price + "kg/kr * " +
+                            order4 = fruit4.Name + "  " + fruit4.Price + "kr/kg * " +
                                 fruit4.Quantity + "kg  " + fruit4.TotalPrice + ";-";
 
 
@@ -271,14 +271,14 @@ namespace butik
                                 " " + fruit5.Price + "kr/kg");
 
 
-                            Console.WriteLine("\nHur mycket KG ska du ha:");
+                            Console.Write("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
                             fruit5.TotalPrice = OrderQuantity * fruit5.TotalPrice;
                             fruit5.Quantity = OrderQuantity; ;
 
-                            order5 = fruit5.Name + "  " + fruit5.Price + "kg/kr * " +
+                            order5 = fruit5.Name + "  " + fruit5.Price + "kr/kg * " +
                                 fruit5.Quantity + "kg  " + fruit5.TotalPrice + ";-";
 
                             //Lägg till orderlist i Order Klass
@@ -310,14 +310,14 @@ namespace butik
                             Console.WriteLine("Du har valt " + "---------->" + fruit6.Name +
                                 " " + fruit6.Price + "kr/kg");
 
-                            Console.WriteLine("\nHur mycket KG ska du ha:");
+                            Console.Write("\nHur mycket KG ska du ha:");
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
                             fruit6.TotalPrice = OrderQuantity * fruit6.TotalPrice;
                             fruit6.Quantity = OrderQuantity; ;
 
-                            order6 = fruit5.Name + "  " + fruit6.Price + "kg/kr * " +
+                            order6 = fruit5.Name + "  " + fruit6.Price + "kr/kg * " +
                                 fruit6.Quantity + "kg  " + fruit6.TotalPrice + ";-";
 
 

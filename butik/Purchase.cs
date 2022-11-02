@@ -13,7 +13,7 @@ namespace butik
 
         public static void  Cost()
         {
-            int cash;
+            int cash, output,  fiveHundred, oneHundred, fifty, twenty, ten, five, two, one;
             //List till alla produkter 
             double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
             double totalGodis = Order.candylist.Sum(item => item.TotalPrice);
@@ -63,7 +63,7 @@ namespace butik
                     }
 
                     //Kunden ska mata in sina sedlar här 
-                    Console.Write("\nMata in sedlar här: ");
+                    Console.Write("\nAnge pengar i automaten här: ");
 
                     int customerMoney = Convert.ToInt32(Console.ReadLine());
 
@@ -84,7 +84,7 @@ namespace butik
                     {
                         wallet[customerMoney] -= currentQuantity;
                         double change = (int)(cash - totalProductPrice), rem = 0;
-
+                        int customerChange = (int) change;
 
                         Console.Clear();
 
@@ -109,42 +109,97 @@ namespace butik
                             Program.logo();
                             Console.WriteLine("Tack för att du hadlat oss\n" +
                                               "Här är dina växel: " + change + " SEK\n");
-
-                            Console.WriteLine("\n----------------");
-                            Console.WriteLine("500: " + (int)(change / 500));
-                            rem = change % 500;
                             
 
-                            Console.WriteLine("100: " + (int)(rem / 100));
-                            rem = change % 100;
-                           
+                            fiveHundred = (int)change / 500;
+                            change = change - (fiveHundred * 500);
+                            oneHundred = (int)change / 100;
+                            change = change - (oneHundred * 100);
+                            fifty = (int)change / 50;
+                            change = change - (fifty * 50);
+                            twenty = (int)change / 20;
+                            change = change - (twenty * 20);
+                            ten = (int)change / 10;
+                            change = change - (ten * 10);
+                            five = (int)change / 5;
+                            change = change - (five * 5);
+                            two = (int)change / 2;
+                            change = change - (two * 2);
+                            one = (int)change / 1;
+                            change = change - (one * 1);
 
-                            Console.WriteLine("50: " + (int)(rem / 50));                   
-                            rem = change % 50;
-                            
-                            Console.WriteLine("20: " + (int)(rem / 20));                            
-                            rem = change % 20;
-                            
-                            
-                            Console.WriteLine("10: " + (int)(rem / 10));
-                            rem = change % 10;
-                            
-                            Console.WriteLine("5: " + (int)(rem / 5));
-                            rem = change % 5;
-                            
-                            Console.WriteLine("2: " + (int)(rem / 2));
-                            rem = change % 2;
-                            
-                            Console.WriteLine("1: " + (int)(rem / 1));
-                            rem = change % 1;
-                            
-                            
-                            Console.WriteLine("----------------");
+                            Console.Clear();
+                            Program.logo();
 
-                            
+                            Console.WriteLine("\n     Här är dina Växel. Varsågod! " +
+                                              "\n----------------------------------" +
+                                              "\n          500: " + fiveHundred +
+                                              "\n          100: " + oneHundred +
+                                              "\n           50: " + fifty +
+                                              "\n           20: " + twenty +
+                                              "\n           10: " + ten +
+                                              "\n            5: " + five +
+                                              "\n            2: " + two +
+                                              "\n            1: " + one +
+                                              "\n----------------------------------" +
+                                              "\n TOTALT:     {0}", customerChange);
 
-                            Console.WriteLine("\nPress any key to continue to Receipt");
+
+                            Console.WriteLine("\nPress any key to continue...");
                             Console.ReadKey();
+
+                            Console.Clear();
+                            Program.logo();
+                            receipt();
+
+                            Console.WriteLine("\nMottaget kontant: " + cash +
+                                              "\nÅter     kontant: " + customerChange);
+
+                            Console.WriteLine("\nPress any key to continue...");
+                            Console.ReadKey();
+
+                            Console.Clear();
+                            Program.logo();
+
+                            Console.Write("\n\n1. Beställa mer.\n" +
+                                              "2. Huvud meny\n" +
+                                              "3. Avsluta programmet\n" +
+                                          "\nVälj en alternativ mellam 1 till 3: ");
+                            output = Convert.ToInt32(Console.ReadLine());
+
+                            if (output == 1)
+                            {
+                                Console.Clear();
+                                Program.productMenu(args);
+
+                            }
+                            else if (output == 2)
+                            {
+                                Console.Clear();
+                                Program.productMenu(args);
+                            }
+                            else if (output == 3)
+                            {
+                                Console.Clear();
+                                Program.logo();
+                                
+                                
+
+                                Console.WriteLine("\nTack för att du har besökt oss :)\n\n\n");
+                                Environment.Exit(0);
+
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                //Anroppa logo 
+                                Program.logo();
+
+                                Console.WriteLine("                    OBS!!!\n" +
+                                                  "----------------------------------------------\n" +
+                                                  "Var snäll välja em alternativ mellan 1 till 5!");
+                            }
+
 
                             break;
                         }
@@ -157,8 +212,14 @@ namespace butik
                     }               
                                         
                 }
+
+                Console.Clear();
+                Program.logo();
+
+
+
                 
-                receipt();
+                
 
             }
 
@@ -168,7 +229,7 @@ namespace butik
                                   "2. Huvud meny\n" +
                                   "3. Avsluta programmet\n" +
                                   "\nVälj en alternativ mellam 1 till 3: ");
-            int output = Convert.ToInt32(Console.ReadLine());
+            output = Convert.ToInt32(Console.ReadLine());
 
             if (output == 1)
             {
@@ -178,6 +239,7 @@ namespace butik
             }
             else if (output == 2)
             {
+                Console.Clear();
                 Program.productMenu(args);
             }
             else if (output == 3)
@@ -221,13 +283,14 @@ namespace butik
 
             //Kvitto
 
-            Console.WriteLine("                KVITTO\n" +
-                    "------------------------------------------------");
+            Console.WriteLine("                           KVITTO\n" +
+                              "----------------------------------------------------");
             Order.fruitList();
             Order.godisList();
+            Order.drinkList();
 
-            Console.WriteLine("------------------------------------------------\n" +
-                              "\nTotalt SEK                                " +
+            Console.WriteLine("----------------------------------------------------\n" +
+                              "\nTotalt SEK                                      " +
                               totalProductPrice + ";-");
 
 
@@ -237,63 +300,11 @@ namespace butik
                               "GODKÄNT");
 
             Cart.remove();
+
+            
             
 
-            Console.Write("\n\n1. Beställa mer.\n" +
-                                  "2. Huvud meny\n" +
-                                  "3. Avsluta programmet\n" +
-                                  "\nVälj en alternativ mellam 1 till 3: ");
-            int output = Convert.ToInt32(Console.ReadLine());
-
-            if (output == 1)
-            {
-                Console.Clear();
-                Program.productMenu(args);
-
-            }
-            else if (output == 2)
-            {
-                Program.productMenu(args);
-            }
-            else if (output == 3)
-            {
-
-                Console.Clear();
-
-
-                //Anroppa logo 
-                Program.logo();
-
-                //Kvitto
-
-                Console.WriteLine("                KVITTO\n" +
-                    "------------------------------------------------");
-                Order.fruitList();
-                Order.godisList();
-
-                Console.WriteLine("------------------------------------------------\n" +
-                                  "\nTotalt SEK                                " +
-                                  totalProductPrice + ";-");
-
-
-
-                Console.WriteLine("\n\n\nKöp" +
-                                  "SEK                      " + totalProductPrice + "\n" +
-                                  "GODKÄNT");
-                Console.WriteLine("\n\n\n\n\nTack för att du har besökt oss :)\n\n\n");
-                Environment.Exit(0);
-
-            }
-            else
-            {
-                Console.Clear();
-                //Anroppa logo 
-                Program.logo();
-
-                Console.WriteLine("                    OBS!!!\n" +
-                                  "----------------------------------------------\n" +
-                                  "Var snäll välja em alternativ mellan 1 till 5!");
-            }
+            
 
             
         }

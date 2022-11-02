@@ -23,7 +23,7 @@ namespace butik
             foreach (Fruit fruit in fruitlist)
             {
 
-                Console.WriteLine("{0}             {1}kr/kg * {2}st               {3};- ",
+                Console.WriteLine("{0,-20} {1,2}kr/kg * {2}kg {3,15};- ",
                     fruit.Name, fruit.Price,
                     fruit.Quantity, fruit.TotalPrice);
 
@@ -36,7 +36,7 @@ namespace butik
             foreach (Candy godis in Order.candylist)
             {
 
-                Console.WriteLine("{0}             {1}kr/kg * {2}st               {3};- ",
+                Console.WriteLine("{0,-20} {1,2}kr/st * {2}st {3,15};- ",
                     godis.Name, godis.Price,
                     godis.Quantity, godis.TotalPrice);
 
@@ -47,7 +47,7 @@ namespace butik
             foreach (Drink drink in Order.drinklist)
             {
 
-                Console.WriteLine("{0}             {1}kr/kg * {2}st               {3};- ",
+                Console.WriteLine("{0,-20} {1,2}kr/st * {2}st {3,15};- ",
                     drink.Name, drink.Price,
                     drink.Quantity, drink.TotalPrice);
 
