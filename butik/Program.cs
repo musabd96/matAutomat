@@ -18,17 +18,17 @@ namespace butik
             //Hälsing meddelande till kunden
             Console.WriteLine("-------------------------------------------------" +
                 "\n|          Välkommen till MUAB Supermarket      |\n"+
-                "-------------------------------------------------\n");
+                "-------------------------------------------------");
             
 
             // Menyn
             while (true)
             {
 
-                Console.WriteLine("\n1. produkter");
-                Console.WriteLine("2. varukorgen");
-                Console.WriteLine("3. avsluta");
-                Console.Write("\nVälj en alternativ mellam 1 till 3: ");
+                Console.WriteLine("\n          1. produkter");
+                Console.WriteLine("          2. varukorgen");
+                Console.WriteLine("          3. avsluta");
+                Console.Write("\n\nVälj en alternativ mellam 1 till 3: ");
 
                 //var cart = new Cart();
 
@@ -106,12 +106,12 @@ namespace butik
                 //Anroppa logo 
 
                 Console.WriteLine(
-                    "\n1. Frukter \n"+
-                    "2. Godis \n" +
-                    "3. Dricker \n" +
-                    "4. varukorgen \n" +
-                    "5. Betaling \n" +
-                    "6. Tillbaka hemma ");
+                    "\n          1. Frukter \n" +
+                    "          2. Godis \n" +
+                    "          3. Dricker \n" +
+                    "          4. varukorgen \n" +
+                    "          5. Betaling \n" +
+                    "          6. Tillbaka hemma ");
                 Console.Write("\nVälj en alternativ mellam 1 till 4: ");
 
                 //var cart = new Cart();
