@@ -18,6 +18,7 @@ namespace butik
             double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
             double totalGodis = Order.candylist.Sum(item => item.TotalPrice);
             double totalDrink = Order.drinklist.Sum(item => item.TotalPrice);
+            
 
             //totala priser till alla produkter i kundvagn
             decimal totalProductPrice = (int)(totalFruit + totalGodis + totalDrink);
@@ -104,26 +105,40 @@ namespace butik
                         }
                         else if (totalProductPrice <= cash)
                         {
+                            Console.Clear();
+                            Program.logo();
                             Console.WriteLine("Tack för att du hadlat oss\n" +
                                               "Här är dina växel: " + change + " SEK\n");
 
                             Console.WriteLine("\n----------------");
                             Console.WriteLine("500: " + (int)(change / 500));
                             rem = change % 500;
+                            
+
                             Console.WriteLine("100: " + (int)(rem / 100));
                             rem = change % 100;
-                            Console.WriteLine("50: " + (int)(rem / 50));
+                           
+
+                            Console.WriteLine("50: " + (int)(rem / 50));                   
                             rem = change % 50;
-                            Console.WriteLine("20: " + (int)(rem / 20));
+                            
+                            Console.WriteLine("20: " + (int)(rem / 20));                            
                             rem = change % 20;
+                            
+                            
                             Console.WriteLine("10: " + (int)(rem / 10));
                             rem = change % 10;
+                            
                             Console.WriteLine("5: " + (int)(rem / 5));
                             rem = change % 5;
+                            
                             Console.WriteLine("2: " + (int)(rem / 2));
                             rem = change % 2;
+                            
                             Console.WriteLine("1: " + (int)(rem / 1));
                             rem = change % 1;
+                            
+                            
                             Console.WriteLine("----------------");
 
                             
@@ -282,6 +297,7 @@ namespace butik
 
             
         }
+
 
 
         
