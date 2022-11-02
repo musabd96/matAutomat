@@ -21,23 +21,34 @@ namespace butik
                 "-------------------------------------------------");
             
 
-            // Menyn
+            // Huvudmenyn
             while (true)
             {
 
-                Console.WriteLine("\n          1. produkter");
-                Console.WriteLine("          2. varukorgen");
-                Console.WriteLine("          3. avsluta");
-                Console.Write("\n\nVälj en alternativ mellam 1 till 3: ");
+                Console.WriteLine("\n               1. Sätt in automater pengar" +
+                                  "\n               2. Produkter" +
+                                  "\n               3. Varukorgen" +
+                                  "\n               4. Avsluta programmet");
 
-                //var cart = new Cart();
+                Console.Write("\nVälj en alternativ mellam 1 till 4: ");
+
+
+
+
 
                 try
                 {
                     Choice = Convert.ToInt32(Console.ReadLine());
 
                     //Anropa Product Menu klass
+
                     if (Choice == 1)
+                    {
+                        Console.Clear ();
+                        logo();
+                        Wallet.wallet();
+                    }
+                    else if (Choice == 2)
                     {
                         Console.Clear();
 
@@ -46,7 +57,7 @@ namespace butik
                     }
 
                     //Anropa Kungvagn klass
-                    else if (Choice == 2)
+                    else if (Choice == 3)
                     {
                         Console.Clear();
                         Cart.printCart(args);
@@ -54,7 +65,7 @@ namespace butik
                     }
 
                     //Avsluta programmet
-                    else if (Choice == 3)
+                    else if (Choice == 4)
                     {
                         Console.Clear();
                         Console.WriteLine("\nTack för att du har besökt oss :)\n\n\n");
@@ -69,7 +80,7 @@ namespace butik
 
                         Console.WriteLine("                    OBS!!!\n" +
                                           "----------------------------------------------\n" +
-                                          "Var snäll välja em alternativ mellan 1 till 5!");
+                                          "Var snäll välja em alternativ mellan 1 till 4!");
 
                     }
                 }
@@ -111,8 +122,8 @@ namespace butik
                     "          3. Dricker \n" +
                     "          4. varukorgen \n" +
                     "          5. Betaling \n" +
-                    "          6. Tillbaka hemma ");
-                Console.Write("\nVälj en alternativ mellam 1 till 4: ");
+                    "          6. Tillbaka hemma\n ");
+                Console.Write("\nVälj en alternativ mellam 1 till 6: ");
 
                 //var cart = new Cart();
 
@@ -194,7 +205,11 @@ namespace butik
             //LOGO
             Console.WriteLine("------------------------------------------------" +
                 "\n|              MUAB Supermarket                |\n" +
-                "------------------------------------------------\n");
+                "------------------------------------------------");
+            double balance = Wallet.automaticMachine.Sum();
+            Console.WriteLine("                                 saldo är: " + balance + " SEK");
+
+
         }
 
         

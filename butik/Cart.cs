@@ -10,15 +10,18 @@ namespace butik
     {
         private static string[]? args;
 
+        public static double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
+        public static double totalCandy = Order.candylist.Sum(item => item.TotalPrice);
+        public static double totalDrink = Order.drinklist.Sum(item => item.TotalPrice);
+
+        public static int total = (int)(Cart.totalFruit + Cart.totalCandy + Cart.totalDrink);
+
         public static void printCart(string[]? args)
         {
 
-            double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
-            double totalGodis = Order.candylist.Sum(item => item.TotalPrice);
-            double totalDrink = Order.drinklist.Sum(item => item.TotalPrice);
 
 
-            int total = (int)(totalFruit + totalGodis + totalDrink);
+            //int total = (int)(Cart.totalFruit + Cart.totalGodis + Cart.totalDrink);
 
             Console.Clear();
             //Anroppa logo 
@@ -68,13 +71,12 @@ namespace butik
         }
         public static void remove()
         {
+            
             Order.fruitlist.Clear();
             Order.candylist.Clear();
             Order.drinklist.Clear();
-
-            Order.fruitList();
-            Order.godisList();
-            Order.drinkList();
+            Cart.total = 0;
+            
 
         }
     }
