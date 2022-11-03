@@ -14,16 +14,17 @@ namespace butik
         {
             int Choice;
 
-            Console.Clear();
+            
             //Hälsing meddelande till kunden
-            Console.WriteLine("-------------------------------------------------" +
-                "\n|          Välkommen till MUAB Supermarket      |\n"+
-                "-------------------------------------------------");
             
 
             // Huvudmenyn
             while (true)
             {
+                Console.Clear();
+                Console.WriteLine("-------------------------------------------------" +
+                    "\n|          Välkommen till MUAB Supermarket      |\n"+
+                    "-------------------------------------------------");
 
                 Console.WriteLine("\n               1. Sätt in automater pengar" +
                                   "\n               2. Produkter" +
@@ -138,7 +139,7 @@ namespace butik
                         Console.Clear();
 
                         Fruit.Menu(args);
-                        
+                         
                         
 
                     }
@@ -168,7 +169,9 @@ namespace butik
                     else if (Choice == 6)
                     {
                         Console.Clear();
+                        
                         Main(args);
+                        
                         break;
 
                     }
@@ -179,7 +182,7 @@ namespace butik
 
                         Console.WriteLine("                    OBS!!!\n" +
                                           "----------------------------------------------\n" +
-                                          "Var snäll välja em alternativ mellan 1 till 5!");
+                                          "Var snäll välja en alternativ mellan 1 till 6!");
 
                     }
                 }

@@ -31,7 +31,7 @@ namespace butik
                               "\nProduker        koster * Antal            Totalkosnad" + 
                               "\n-----------------------------------------------------");
             Order.fruitList();
-            Order.godisList();
+            Order.candyList();
             Order.drinkList();
 
             Console.WriteLine("-----------------------------------------------------\n" +

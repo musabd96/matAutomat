@@ -76,7 +76,7 @@ namespace butik
                             i + 1, candyName[i], candyCost[i]);
                     }
 
-
+                    Console.WriteLine("7. Tillbaka till menyn");
 
                     //Produkter och kostnad
 
@@ -90,7 +90,7 @@ namespace butik
 
                     try
                     {
-                        Console.WriteLine("Välj en produkt att lägga i varukorgen: ");
+                        Console.WriteLine("\nVälj en produkt att lägga i varukorgen: ");
 
                         OrderCandy = Convert.ToInt32(Console.ReadLine());
 
@@ -336,6 +336,14 @@ namespace butik
                             Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
 
                             Console.ReadKey();
+                            Console.Clear();
+                            Program.logo();
+
+                            break;
+
+                        }
+                        else if (OrderCandy == 7)
+                        {
                             Console.Clear();
                             Program.logo();
 

@@ -74,10 +74,7 @@ namespace butik
                         Program.logo();
                         Console.WriteLine("Tack för att du hadlat oss\n" +
                                             "Här är dina växel: " + change + " SEK\n");
-
-
-
-
+                                                
                         fiveHundred = (int)change / 500;
                         change = change - (fiveHundred * 500);
                         oneHundred = (int)change / 100;
@@ -96,7 +93,6 @@ namespace butik
                         change = change - (one * 1);
 
                        
-
                         Console.WriteLine("\n     Här är dina Växel. Varsågod! " +
                                             "\n----------------------------------" +
                                             "\n          500: " + fiveHundred +
@@ -111,8 +107,10 @@ namespace butik
                                             "\n TOTALT:     {0}",  ChangeCurrency);
 
                         Wallet.automaticMachine.Clear();
+
                         
-                        
+
+
 
                         Console.WriteLine("\nPress any key to continue...");
                         Console.ReadKey();
@@ -150,6 +148,8 @@ namespace butik
                 Console.WriteLine("\n\n          Din kundvagn är tom");
                 Console.Write("\n\n\nPress any key to continue...");
                 Console.ReadKey();
+                Console.Clear();
+
             }
             Console.Clear ();
             Program.logo();
@@ -183,7 +183,7 @@ namespace butik
             Console.WriteLine("\n1                           KVITTO\n" +
                               "----------------------------------------------------");
             Order.fruitList();
-            Order.godisList();
+            Order.candyList();
             Order.drinkList();
 
             Console.WriteLine("----------------------------------------------------\n" +
@@ -195,6 +195,8 @@ namespace butik
             Console.WriteLine("\n\n\nKöp" +
                               "SEK                      " + totalProductPrice + "\n" +
                               "GODKÄNT");
+
+           
 
 
 

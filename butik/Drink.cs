@@ -74,7 +74,7 @@ namespace butik
                         Console.WriteLine("{0}. {1,-20} {2}kr/st\n", i + 1, drinkName[i], drinkCost[i]);
                     }
 
-
+                    Console.WriteLine("7. Tillbaka till menyn");
 
                     //Produkter och kostnad
 
@@ -91,7 +91,7 @@ namespace butik
 
                     try
                     {
-                        Console.WriteLine("Välj en produkt att lägga i varukorgen: ");
+                        Console.WriteLine("\nVälj en produkt att lägga i varukorgen: ");
 
                         orderDrink = Convert.ToInt32(Console.ReadLine());
 
@@ -283,6 +283,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink5);
+                            
 
                             Console.Clear();
 
@@ -300,6 +301,12 @@ namespace butik
                             Program.logo();
                             break;
 
+                        }
+                        else if (orderDrink == 7)
+                        {
+                            Console.Clear();
+                            Program.logo();
+                            break;
                         }
                         else if (orderDrink == 6)
                         {
@@ -319,11 +326,12 @@ namespace butik
 
                             order6 = drink5.Name + "  " + drink6.Price + "kr * " +
                                 drink6.Quantity + "st  " + drink6.TotalPrice + ";-";
-
+                            
 
 
                             //Lägg till orderlist i Order Klass
-                            Order.drinklist.Add(drink6); ;
+                            Order.drinklist.Add(drink6); 
+                            
                             Console.Clear();
 
                             //Anroppa logo 
@@ -372,6 +380,7 @@ namespace butik
 
             }
         }
+        
 
         
 

@@ -63,8 +63,8 @@ namespace butik
 
                     //Produkt display
 
-                    string[] fruitName = { "Äpple", "Päron", "Mango", "Citron", "Banan", "Sallad" };
-                    int[] fruitCost = { 29, 19, 10, 5, 16, 14 };
+                    string[] fruitName = { "Äpple", "Päron", "Mango", "Citron", "Banan", "Sallad"};
+                    int[] fruitCost = { 29, 19, 10, 5, 16, 14,  };
 
                     Console.WriteLine("\nProdukter              kostnad");
                     Console.WriteLine("--------------------------------\n");
@@ -73,6 +73,8 @@ namespace butik
                     {
                         Console.WriteLine("{0}. {1,-20} {2}kr/kg\n", i + 1, fruitName[i], fruitCost[i]);
                     }
+
+                    Console.WriteLine("7. Tillbaka till menyn");
 
 
 
@@ -91,7 +93,7 @@ namespace butik
 
                     try
                     {
-                        Console.WriteLine("Välj en produkt att lägga i varukorgen: ");
+                        Console.WriteLine("\nVälj en produkt att lägga i varukorgen: ");
 
                         OrderFruit = Convert.ToInt32(Console.ReadLine());
 
@@ -339,6 +341,12 @@ namespace butik
                             Program.logo();
                             break;
 
+                        }
+                        else if (OrderFruit == 7)
+                        {
+                            Console.Clear();
+                            Program.logo();
+                            break;
                         }
                         else
                         {

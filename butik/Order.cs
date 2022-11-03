@@ -31,7 +31,7 @@ namespace butik
 
         }
       
-        public static void godisList()
+        public static void candyList()
         {
             foreach (Candy godis in Order.candylist)
             {
