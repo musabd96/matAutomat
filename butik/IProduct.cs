@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace butik
 {
+    //Interface klass till produkt klasses
     internal interface IProduct
     {
-        string Name { get; set; }
-
-        int Price { get; set; }
-
-        int Quantity { get; set; }
-
-        int TotalPrice { get; set; }
+        
 
         string ToString();
 

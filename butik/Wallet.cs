@@ -12,10 +12,11 @@ namespace butik
     {
         public int costomerMoney { get; set; }
 
-        
+        //List till automaten för att mata in pengar användare
         public static List<int> automaticMachine= new List<int>();
         public static void wallet()
         {
+            //Kund plånboken
             int cash;
             Dictionary<int, int> wallet = new Dictionary<int, int>();
             wallet.Add(500, 10);
@@ -30,14 +31,14 @@ namespace butik
 
             Console.WriteLine("\n     PLÅNBOK \n" +
                               "------------------\n");
-
+            //skriva ut plånboken
             foreach (var currency in wallet)
             {
                 Console.WriteLine("{0} ----------> {1}", currency.Key, currency.Value);
 
             }
 
-            
+            //Anvandare ska mata in pengar 
 
             Console.Write("" +
                                     "\nAnge pengar i automaten här: ");

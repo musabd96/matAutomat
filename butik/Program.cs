@@ -115,7 +115,7 @@ namespace butik
             {
 
                 
-                //Anroppa logo 
+                 
 
                 Console.WriteLine(
                     "\n          1. Frukter \n" +
@@ -126,7 +126,7 @@ namespace butik
                     "          6. Tillbaka hemma\n ");
                 Console.Write("\nVälj en alternativ mellam 1 till 6: ");
 
-                //var cart = new Cart();
+                
 
                 try
                 {
@@ -144,7 +144,7 @@ namespace butik
 
                     }
 
-                    //Anropa Drink klass
+                   
                     else if (Choice == 2)
                     {
                         Console.Clear();
@@ -210,6 +210,8 @@ namespace butik
                 "\n|              MUAB Supermarket                |\n" +
                 "------------------------------------------------");
             double balance = Wallet.automaticMachine.Sum();
+
+            //visa saldo i automaten
             Console.WriteLine("                                 saldo är: " + balance + " SEK");
 
 

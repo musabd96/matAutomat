@@ -210,7 +210,7 @@ namespace butik
 
                             Console.Clear();
 
-                            //Anroppa logo 
+                             
                             Program.logo();
 
                             Console.WriteLine("Tack för att du handlat oss! " +
