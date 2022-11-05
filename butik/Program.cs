@@ -9,9 +9,10 @@ namespace butik
     internal class Program
     {
 
-
+        
         static void Main(string[] args)
         {
+            
             int Choice;
 
             
@@ -103,6 +104,9 @@ namespace butik
 
         public static void productMenu(string[] args)
         {
+            Fruit fruit = new Fruit();
+            Candy candy = new Candy();
+            Drink drink = new Drink();
             // Huvud  Menyn
 
             int Choice;
@@ -138,8 +142,7 @@ namespace butik
                     {
                         Console.Clear();
 
-                        Fruit.Menu(args);
-                         
+                        fruit.description();
                         
 
                     }
@@ -148,12 +151,12 @@ namespace butik
                     else if (Choice == 2)
                     {
                         Console.Clear();
-                        Candy.Menu(args);
+                        candy.description();
 
                     }
                     else if (Choice == 3)
                     {
-                        Drink.Menu(args);
+                        drink.description();
                     }
                     else if (Choice == 4)
                     {

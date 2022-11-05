@@ -8,29 +8,28 @@ namespace butik
 {
     internal class Cart
     {
-        private static string[]? args;
+        
 
         //summan till alla priser i produkter
         public static double totalFruit = Order.fruitlist.Sum(item => item.TotalPrice);
         public static double totalCandy = Order.candylist.Sum(item => item.TotalPrice);
         public static double totalDrink = Order.drinklist.Sum(item => item.TotalPrice);
 
-        public static int total = (int)(Cart.totalFruit + Cart.totalCandy + Cart.totalDrink);
+        
+        
 
+        public static int total = (int)((Cart.totalFruit + Cart.totalCandy )+ Cart.totalDrink);
+        
         //Kundvang skriva ut 
         public static void printCart(string[]? args)
         {
-
-
-
-           
-
             Console.Clear();
+           
             //Anroppa logo 
             Program.logo();
             Console.WriteLine("                    VARUKORGEN\n" +
                               "-------------------------------------------------------" +
-                              "\nProduker        koster * Antal            Totalkosnad" + 
+                              "\nProduker           koster * Antal       Totalkosnad" + 
                               "\n-----------------------------------------------------");
             Order.fruitList();
             Order.candyList();
@@ -74,17 +73,7 @@ namespace butik
 
         }
 
-        //efter användare betalat alla produckter i kundvagn ska ta bort
-        public static void remove()
-        {
-            
-            Order.fruitlist.Clear();
-            Order.candylist.Clear();
-            Order.drinklist.Clear();
-            Cart.total = 0;
-            
-
-        }
+        
     }
 
 

@@ -27,6 +27,10 @@ namespace butik
 
         }
 
+        public Drink()
+        {
+        }
+
         public override string ToString()
         {
             return Name + " " + Price + " " + Quantity + " " + TotalPrice;
@@ -35,8 +39,9 @@ namespace butik
 
         //Frukt menyn
 
-        public static void Menu(string[] args)
+        public void description()
         {
+            Drink drink = new Drink();
             while (true)
             {
 
@@ -76,6 +81,8 @@ namespace butik
 
                     Console.WriteLine("7. Tillbaka till menyn");
 
+                    Console.WriteLine("--------------------------------\n");
+
                     //Produkter och kostnad
 
                     Drink drink1 = new Drink("Coca Cola", 12);
@@ -91,7 +98,7 @@ namespace butik
 
                     try
                     {
-                        Console.WriteLine("\nVälj en produkt att lägga i varukorgen: ");
+                        Console.Write("\nVälj en produkt att lägga i varukorgen: ");
 
                         orderDrink = Convert.ToInt32(Console.ReadLine());
 
@@ -118,6 +125,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink1);
+                            drinklist.Add(drink1);
 
 
 
@@ -166,6 +174,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink2);
+                            drinklist.Add(drink2);
 
                             Console.Clear();
                             //Anroppa logo 
@@ -205,6 +214,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink3);
+                            drinklist.Add(drink3);
 
                             Console.Clear();
 
@@ -246,6 +256,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink4);
+                            drinklist.Add(drink4);
 
                             Console.Clear();
 
@@ -283,6 +294,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink5);
+                            drinklist.Add(drink5);
                             
 
                             Console.Clear();
@@ -331,6 +343,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.drinklist.Add(drink6); 
+                            drinklist.Add(drink6);
                             
                             Console.Clear();
 
@@ -380,10 +393,35 @@ namespace butik
 
             }
         }
-        
+
+        //Drink order list 
+        public static List<Drink> drinklist = new List<Drink>();
+
 
         
+        public void use()
+        {
+            foreach (Drink drink in drinklist)
+            {
 
-        
+                Console.WriteLine("\n     Dricker ---->{0} ", drink.Name);
+
+            }
+            ;
+        }
+
+        public void buy()
+        {
+
+            foreach (Drink drink in drinklist)
+            {
+
+                Console.WriteLine("\n     {0}st {1} som koster: {2}", drink.Quantity, drink.Name, drink.TotalPrice);
+
+            }
+
+        }
+
+
     }
 }

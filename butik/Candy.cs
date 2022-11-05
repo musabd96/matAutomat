@@ -25,6 +25,10 @@ namespace butik
 
         }
 
+        public Candy()
+        {
+        }
+
         public override string ToString()
         {
             return Name + " " + Price + " " + Quantity + " " + TotalPrice;
@@ -33,8 +37,9 @@ namespace butik
 
         //Frukt menyn
 
-        public static void Menu(string[] args)
+        public void description()
         {
+            Candy candy = new Candy();
             while (true)
             {
 
@@ -78,6 +83,8 @@ namespace butik
 
                     Console.WriteLine("7. Tillbaka till menyn");
 
+                    Console.WriteLine("--------------------------------\n");
+
                     //Produkter och kostnad
 
                     Candy candy1 = new Candy("Kex", 9);
@@ -85,12 +92,12 @@ namespace butik
                     Candy candy3 = new Candy("Twix", 10);
                     Candy candy4 = new Candy("Polly", 25);
                     Candy candy5 = new Candy("Haribo Nappar", 15);
-                    Candy godis6 = new Candy("Marabou", 24);
+                    Candy candy6 = new Candy("Marabou", 24);
 
 
                     try
                     {
-                        Console.WriteLine("\nVälj en produkt att lägga i varukorgen: ");
+                        Console.Write("\nVälj en produkt att lägga i varukorgen: ");
 
                         OrderCandy = Convert.ToInt32(Console.ReadLine());
 
@@ -118,6 +125,8 @@ namespace butik
                             //Lägg till orderlist i Order Klass
 
                             Order.candylist.Add(candy1);
+                            candylist.Add(candy1);
+                            
 
                             Console.Clear();
 
@@ -159,6 +168,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.candylist.Add(candy2);
+                            candylist.Add(candy2);
 
                             Console.Clear();
 
@@ -198,6 +208,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.candylist.Add(candy3);
+                            candylist.Add(candy3);
 
                             Console.Clear();
 
@@ -239,6 +250,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.candylist.Add(candy4);
+                            candylist.Add(candy4);
 
                             Console.Clear();
 
@@ -280,6 +292,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.candylist.Add(candy5);
+                            candylist.Add(candy5);
 
                             Console.Clear();
 
@@ -306,8 +319,8 @@ namespace butik
 
                             //Anroppa logo 
                             Program.logo();
-                            Console.WriteLine("Du har valt " + "---------->" + godis6.Name +
-                                " " + godis6.Price + "kr");
+                            Console.WriteLine("Du har valt " + "---------->" + candy6.Name +
+                                " " + candy6.Price + "kr");
 
                             
 
@@ -315,16 +328,17 @@ namespace butik
 
                             OrderQuantity = Convert.ToInt32(Console.ReadLine());
 
-                            godis6.TotalPrice = OrderQuantity * godis6.TotalPrice;
-                            godis6.Quantity = OrderQuantity; ;
+                            candy6.TotalPrice = OrderQuantity * candy6.TotalPrice;
+                            candy6.Quantity = OrderQuantity; ;
 
-                            order6 = candy5.Name + "  " + godis6.Price + "kr/st * " +
-                                godis6.Quantity + "st  " + godis6.TotalPrice + ";-";
+                            order6 = candy5.Name + "  " + candy6.Price + "kr/st * " +
+                                candy6.Quantity + "st  " + candy6.TotalPrice + ";-";
 
 
 
                             //Lägg till orderlist i Order Klass
-                            Order.candylist.Add(godis6); ;
+                            Order.candylist.Add(candy6); ;
+                            candylist.Add(candy6);
                             Console.Clear();
 
                             //Anroppa logo 
@@ -384,6 +398,31 @@ namespace butik
             }
         }
 
-       
+        //Drink order list 
+        public static List<Candy> candylist = new List<Candy>();
+
+        public void use()
+        {
+            foreach (Candy candy in candylist)
+            {
+
+                Console.WriteLine("\n     Äter ---->{0} ", candy.Name);
+
+            }
+
+        }
+
+        public void buy()
+        {
+            foreach (Candy candy in candylist)
+            {
+
+                Console.WriteLine("\n     {0}st {1} som koster: {2}", candy.Quantity, candy.Name, candy.TotalPrice);
+
+            }
+
+        }
+
+
     }
 }

@@ -10,6 +10,7 @@ namespace butik
 {
     internal class Fruit : IProduct
     {
+        
         public string Name { get; set; }
 
         public int Price { get; set; }
@@ -27,6 +28,11 @@ namespace butik
             
         }
 
+        public Fruit()
+        {
+            
+        }
+
         public override string ToString()
         {
             return Name + " " + Price + " " + Quantity+ " " + TotalPrice;
@@ -35,9 +41,10 @@ namespace butik
 
         //Frukt menyn
 
-        public static void Menu(string[] args)
+        public void description()
         {
-           while (true)
+            Fruit fruit = new Fruit();
+            while (true)
             {
 
                 int OrderFruit;
@@ -76,7 +83,7 @@ namespace butik
 
                     Console.WriteLine("7. Tillbaka till menyn");
 
-
+                    Console.WriteLine("--------------------------------\n");
 
                     //Produkter och kostnad
 
@@ -93,7 +100,7 @@ namespace butik
 
                     try
                     {
-                        Console.WriteLine("\nVälj en produkt att lägga i varukorgen: ");
+                        Console.Write("\nVälj en produkt att lägga i varukorgen: ");
 
                         OrderFruit = Convert.ToInt32(Console.ReadLine());
 
@@ -120,6 +127,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit1);
+                            fruitlist.Add(fruit1);
 
 
 
@@ -168,6 +176,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit2);
+                            fruitlist.Add(fruit2);
 
                             Console.Clear();
                             //Anroppa logo 
@@ -207,7 +216,9 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit3);
-
+                            fruitlist.Add(fruit3);
+                            Console.WriteLine(fruit3);
+                            Console.Read();
                             Console.Clear();
 
                              
@@ -248,6 +259,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit4);
+                            fruitlist.Add(fruit4);
 
                             Console.Clear();
 
@@ -285,6 +297,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit5);
+                            fruitlist.Add(fruit5);
 
                             Console.Clear();
 
@@ -326,6 +339,7 @@ namespace butik
 
                             //Lägg till orderlist i Order Klass
                             Order.fruitlist.Add(fruit6); ;
+                            fruitlist.Add(fruit6);
                             Console.Clear();
 
                             //Anroppa logo 
@@ -356,7 +370,8 @@ namespace butik
 
                             Console.WriteLine("                    OBS!!!\n" +
                                               "----------------------------------------------\n" +
-                                              "Var snäll välja em alternativ mellan 1 till 6!");
+                                              "Var snäll välja en alternativ mellan 1 till 6!");
+                            Console.Read();
 
                         }
 
@@ -371,14 +386,39 @@ namespace butik
                         Console.WriteLine("                    OBS!!!\n" +
                                           "----------------------------------------------\n" +
                                           "Var snäll välja em alternativ mellan 1 till 6!");
+                        
                     }
                     
 
                 }
                 
                 break;
+            }
+        }
+        //Drink order list 
+        public static List<Fruit> fruitlist = new List<Fruit>();
+
+        public void use()
+        {
+            foreach (Fruit fruit in fruitlist)
+            {
+
+                Console.WriteLine("\n     Äter ---->{0} ", fruit.Name);
 
             }
+            
+        }
+
+        public void buy()
+        {
+
+            foreach (Fruit fruit in fruitlist)
+            {
+
+                Console.WriteLine("\n     {0}st {1} som koster: {2}", fruit.Quantity, fruit.Name, fruit.TotalPrice);
+
+            }
+
         }
 
 
